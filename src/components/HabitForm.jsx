@@ -11,7 +11,7 @@ const HabitForm = ({ fetchHabits, config }) => {
 
   const handleSubmit = async e => {
     e.preventDefault()
-    await axios.post('http://localhost:5001/habits', habit, config)
+    await axios.post('https://habit-server-one.vercel.app/habits', habit, config)
     fetchHabits()
     setHabit({ name: '', time: '', repeatDays: 1 })
   }

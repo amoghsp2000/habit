@@ -19,7 +19,7 @@ const Auth = () => {
 
   const loginForm = async (email, password) => {
     await axios
-      .post('http://localhost:5001/users/login', {
+      .post('https://habit-server-one.vercel.app/users/login', {
         email: email,
         password: password
       })
@@ -37,7 +37,7 @@ const Auth = () => {
 
   const signUp = async (username, email, password) => {
     await axios
-      .post('http://localhost:5001/users/register', {
+      .post('https://habit-server-one.vercel.app/users/register', {
         username: username,
         email: email,
         password: password

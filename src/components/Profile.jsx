@@ -20,7 +20,7 @@ const Profile = () => {
     }
     useEffect(() => {
       axios
-        .get('http://localhost:5001/users/current', config)
+        .get('https://habit-server-one.vercel.app/users/current', config)
         .then(res => {
           setUsername(res.data.username)
           setEmail(res.data.email)

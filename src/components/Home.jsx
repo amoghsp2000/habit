@@ -23,7 +23,7 @@ const Home = () => {
       navigate('/login')
     } else {
       axios
-        .get('http://localhost:5001/users/current', config)
+        .get('https://habit-server-one.vercel.app/users/current', config)
         .then(res => {
           setUserId(res.data.id)
           setUsername(res.data.username)
@@ -40,7 +40,7 @@ const Home = () => {
 
   const fetchHabits = async () => {
     const response = await axios
-      .get('http://localhost:5001/habits', config)
+      .get('https://habit-server-one.vercel.app/habits', config)
       .then(res => {
         setHabits(res.data)
       })
@@ -50,7 +50,7 @@ const Home = () => {
   }
 
   const archiveCompletedHabits = async () => {
-    await axios.post('http://localhost:5001/habits/archive', {}, config)
+    await axios.post('https://habit-server-one.vercel.app/habits/archive', {}, config)
     fetchHabits()
   }
 

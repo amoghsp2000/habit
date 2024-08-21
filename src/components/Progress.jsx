@@ -20,7 +20,7 @@ const Progress = () => {
   }
 
   const fetchHabits = async () => {
-    const response = await axios.get('http://localhost:5001/habits', config)
+    const response = await axios.get('https://habit-server-one.vercel.app/habits', config)
     setHabits(response.data)
   }
 

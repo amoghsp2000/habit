@@ -3,13 +3,13 @@ import axios from 'axios'
 
 const HabitList = ({ habits, fetchHabits, config }) => {
   const handleDelete = async id => {
-    await axios.delete(`http://localhost:5001/habits/${id}`, config)
+    await axios.delete(`https://habit-server-one.vercel.app/habits/${id}`, config)
     fetchHabits()
   }
 
   const handleToggleComplete = async (id, completed) => {
     await axios.put(
-      `http://localhost:5001/habits/${id}`,
+      `https://habit-server-one.vercel.app/habits/${id}`,
       {
         completed: !completed
       },
