@@ -27,7 +27,7 @@ const MonthlyChart = ({ config }) => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          'http://localhost:5001/habits/completed/monthly',
+          'https://habit-server-one.vercel.app/habits/completed/monthly',
           config
         )
 

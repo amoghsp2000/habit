@@ -12,7 +12,7 @@ const DailyChart = ({ config }) => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          'http://localhost:5001/habits/daily-status',
+          'https://habit-server-one.vercel.app/habits/daily-status',
           config
         )
 

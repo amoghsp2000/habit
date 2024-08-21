@@ -19,7 +19,7 @@ const WeeklyChart = ({ config }) => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          'http://localhost:5001/habits/completed/weekly',
+          'https://habit-server-one.vercel.app/habits/completed/weekly',
           config
         )
 
