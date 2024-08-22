@@ -21,7 +21,7 @@ const Landing = () => {
             <a href='/'>HOME</a>
           </li>
           <li>
-            <a href='/about'>
+            <a onClick={navigate('/about')}>
               ABOUT US
             </a>
           </li>
